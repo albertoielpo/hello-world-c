@@ -5,11 +5,14 @@ A clonable starting point for a C project, with VS Code configuration included.
 - gcc
 
 # Build
-- Navigate to the desired folder
-- `gcc -Wall -Wextra -Wpedantic -O2 -g -std=c99 -o hello hello.c`
+- `gcc -Wall -Wextra -Wpedantic -O2 -g -std=c99 -o hello hello.c` or `make`
 
 ## Build with VS Code
 - Press `Ctrl+Shift+B` to run the default build task
+- Press `F5` to build and attach the debugger
+
+## Build with Zed
+- `make`
 - Press `F5` to build and attach the debugger
 
 ## Convention
@@ -33,7 +36,7 @@ Formatting rules are defined in the `.clang-format` file.
 
 ```sh
 # Format all files
-find . -name "*.c" -o -name "*.h" | xargs ~/.vscode/extensions/ms-vscode.cpptools-*/LLVM/bin/clang-format -i
+find . -name "*.c" -o -name "*.h" | xargs clang-format -i
  ```
 
 ## License
